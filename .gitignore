@@ -50,3 +50,11 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Ada stuff
+b__*.ads
+b__*.adb
+*.ali
+*.adb.stderr
+*.adb.stdout
+*.bexch
