@@ -1,0 +1,11 @@
+project Main is
+
+   for Languages use ("Ada");
+   for Source_Dirs use (".");
+   for Main use ("main.adb");
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g", "-O2", "-gnatwa", "-gnata");
+   end Compiler;
+
+end Main;

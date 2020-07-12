@@ -1,0 +1,4 @@
+-index=prang
+-config=gnat.cfg
+-warn=all
+-listing=ls_
