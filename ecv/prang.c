@@ -30,23 +30,35 @@ static short p1 = (short) 1;					/* initialise 1st sequence value 			*/
 static short p2 = (short) 2;					/* initialise 2nd sequence value 			*/
 static short p3 = (short) 3;					/* initialise 3rd sequence value 			*/
 
+ghost(
+bool invariant1() returns(p1 > 0 && p1 < M1 && p2 > 0 && p2 < M2 && p3 > 0 && p3 < M3);
+)
 
 /*----------------------------------------------------------------------------------------------------------------------
  * Wichmann-Hill 16-bit pseudorandom number generator function                                                        */
 
-double WHprang (void) writes(p1; p2; p3)
+double WHprang (void)
+writes(p1; p2; p3)
+pre(invariant1())
+post(_ecv_result > 0.0; _ecv_result < 1.0)
 {
 	/* first, get required quotients and remainders	*/
 
 	div_t div1 = div((int)p1, (int)a1);									/*### PRECOND: (p1 > 0) and (p1 < M1)     :###*/
+	assert(div1.rem != 0 || div1.quot != 0);
 	div_t div2 = div((int)p2, (int)a2);									/*### PRECOND: (p2 > 0) and (p2 < M2)     :###*/
+	assert(div2.rem != 0 || div2.quot != 0);
 	div_t div3 = div((int)p3, (int)a3);									/*### PRECOND: (p3 > 0) and (p3 < M3)     :###*/
+	assert(div3.rem != 0 || div3.quot != 0);
 
 	/* now calculate next values for p1, p2, p3 using the auxiliary value method to avoid 16-bit overflow */
 
 	p1 = r1 * (short)(div1.rem) - b1 * (short)(div1.quot);
+	assert(p1 > -M1; p1 != 0; p1 < M1);
 	p2 = r2 * (short)(div2.rem) - b2 * (short)(div2.quot);
+	assert(p2 > -M2; p2 != 0; p2 < M2);
 	p3 = r3 * (short)(div3.rem) - b3 * (short)(div3.quot);
+	assert(p3 > -M3; p3 != 0; p3 < M3);
 
     p1 += (int)(p1 < 0) * M1;												/*### POSTCOND: (p1 > 0) and (p1 < m1)    :###*/
     p2 += (int)(p2 < 0) * M2;												/*### POSTCOND: (p2 > 0) and (p2 < M2)    :###*/
@@ -56,13 +68,18 @@ double WHprang (void) writes(p1; p2; p3)
 	 * branching; there is *exactly one simple path* through the function
 	 */
 
+	assert(invariant1());
+
 	{	/* now calculate and return the fractional part of the sum of p1, p2, and p3	*/
 
 		double raux1 = (double)p1/(double)M1;	/* compute intermediate term in p1	*/
 		double raux2 = (double)p2/(double)M2;	/* compute intermediate term in p2	*/
 		double raux3 = (double)p3/(double)M3;	/* compute intermediate term in p3	*/
 
-		double result = fmod( raux1 + raux2 + raux3 , 1.0);		/*### POSTCOND: (result > 0) and (result < 1.0)	  :###*/
+		assert(raux1 > 0.0; raux2 > 0.0; raux3 > 0.0);
+
+		assert(raux1 + raux2 + raux3 > 0.0);
+		double result = fmod( raux1 + raux2 + raux3, 1.0);		/*### POSTCOND: (result > 0) and (result < 1.0)	  :###*/
 
 		return result;	/* return final pseudorandom value	*/
 	}
