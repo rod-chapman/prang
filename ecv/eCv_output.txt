@@ -1,0 +1,173 @@
+--------------------Configuration: Default configuration--------------------
+Verification Studio: Running C:\Escher\PDTool\CplusPlus\UsualChecks\Output\Distribution64-2010\EscherToolC.exe -ll=C++11 -ld=0 -lcs -lws -ls(c=8,w=16,s=16,i=16,l=32,g=32,f=32,d=64,x=64,p=16) -sc="C:\Escher\ecv;C:\Escher\ecv\standard" -z1 -el=3 -em=100 -st=4 -sb=C:\Escher\PDTool\ecv.pd -sr=C:\Escher\PDTool\rubric.pd -vt=200 -vb=15 -vw=0 -vm=1000 -vps=tex -q=0 -vus=html -vpl=0 -vul=0 -vrs=html -vrl=0 -eM=2 "C:\Escher\Customers\prang\prang.c"
+Escher Tool Critical Systems Edition version 7.00.
+Copyright (C) 2017 Escher Technologies Ltd. All rights reserved.
+Reading pre-parsed file C:\Escher\PDTool\ecv.pdc ... 0 seconds
+Binding builtin file ... 0 seconds
+Reading pre-parsed file C:\Escher\PDTool\rubric.pdc ... 0 seconds
+Binding rubric file ... 0 seconds
+Parsing file C:\Escher\Customers\prang\prang.c ... 0 seconds
+C:\Escher\Customers\prang\prang.c (6,8): Warning! '#undef' used (MISRA-C 2012 rule 20.5).
+824 lines processed in parsed files.
+Building program dictionary ... 0 seconds
+Binding type names ... 0 seconds
+Building member dictionaries ... 0 seconds
+Binding other names ... 0 seconds
+C:\Escher\Customers\prang\prang.c (82,5): Warning! Unable to verify call to function 'printf' because it has a variable argument list (MISRA-C 2012 rule 17.1).
+C:\Escher\Customers\prang\prang.c (88,9): Warning! Unable to verify call to function 'printf' because it has a variable argument list (MISRA-C 2012 rule 17.1).
+Linking ... 0 seconds
+Standardising ... 0 seconds
+Analysing ... 0 seconds
+Compacting memory ... 0 seconds
+
+Verifying file 'C:\Escher\Customers\prang\prang.c' ...
+Generating verification conditions ... 143 verification conditions generated
+Proving verification conditions ... confirmed 143 (100% confirmed, longest 3.3 seconds)
+31 seconds
+C:\Escher\Customers\prang\prang.c (14,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)30269.
+C:\Escher\Customers\prang\prang.c (14,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)30269 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (15,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)171.
+C:\Escher\Customers\prang\prang.c (15,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)171 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (16,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)177.
+C:\Escher\Customers\prang\prang.c (16,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)177 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (17,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)2.
+C:\Escher\Customers\prang\prang.c (17,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)2 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (19,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)30307.
+C:\Escher\Customers\prang\prang.c (19,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)30307 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (20,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)172.
+C:\Escher\Customers\prang\prang.c (20,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)172 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (21,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)176.
+C:\Escher\Customers\prang\prang.c (21,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)176 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (22,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)35.
+C:\Escher\Customers\prang\prang.c (22,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)35 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (24,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)30323.
+C:\Escher\Customers\prang\prang.c (24,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)30323 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (25,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)170.
+C:\Escher\Customers\prang\prang.c (25,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)170 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (26,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)178.
+C:\Escher\Customers\prang\prang.c (26,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)178 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (27,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)63.
+C:\Escher\Customers\prang\prang.c (27,29): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)63 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (29,19): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)1.
+C:\Escher\Customers\prang\prang.c (29,19): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)1 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (30,19): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)2.
+C:\Escher\Customers\prang\prang.c (30,19): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)2 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (31,19): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= (int)3.
+C:\Escher\Customers\prang\prang.c (31,19): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: (int)3 <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (41,18): Information! Confirmed: Precondition of 'div' satisfied (defined at C:\Escher\ecv\standard\stdlib.h (94,10)), proved: 0 < static_cast<int>(a1$funcstart_719,1$).
+C:\Escher\Customers\prang\prang.c (41,22): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int' to 'int', proved: p1$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (41,22): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int' to 'int', proved: minof(int) <= p1$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (41,31): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int const' to 'int', proved: minof(int) <= a1$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (41,31): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int const' to 'int', proved: a1$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (42,18): Information! Confirmed: Precondition of 'div' satisfied (defined at C:\Escher\ecv\standard\stdlib.h (94,10)), proved: 0 < static_cast<int>(a2$funcstart_719,1$).
+C:\Escher\Customers\prang\prang.c (42,22): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int' to 'int', proved: p2$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (42,22): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int' to 'int', proved: minof(int) <= p2$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (42,31): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int const' to 'int', proved: minof(int) <= a2$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (42,31): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int const' to 'int', proved: a2$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (43,18): Information! Confirmed: Precondition of 'div' satisfied (defined at C:\Escher\ecv\standard\stdlib.h (94,10)), proved: 0 < static_cast<int>(a3$funcstart_719,1$).
+C:\Escher\Customers\prang\prang.c (43,22): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int' to 'int', proved: p3$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (43,22): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int' to 'int', proved: minof(int) <= p3$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (43,31): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int const' to 'int', proved: minof(int) <= a3$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (43,31): Information! Confirmed: Type constraint satisfied in explicit conversion from 'short int const' to 'int', proved: a3$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (47,10): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= r1$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (47,10): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: r1$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (47,13): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (static_cast<short int>(div1.rem) * r1$funcstart_719,1$).
+C:\Escher\Customers\prang\prang.c (47,13): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (static_cast<short int>(div1.rem) * r1$funcstart_719,1$) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (47,15): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: div1.rem <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (47,15): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= div1.rem.
+C:\Escher\Customers\prang\prang.c (47,15): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= static_cast<short int>(div1.rem).
+C:\Escher\Customers\prang\prang.c (47,15): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: static_cast<short int>(div1.rem) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (47,33): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: minof(short int) <= ((static_cast<short int>(div1.rem) * r1$funcstart_719,1$) - (static_cast<short int>(div1.quot) * b1$funcstart_719,1$)).
+C:\Escher\Customers\prang\prang.c (47,33): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: ((static_cast<short int>(div1.rem) * r1$funcstart_719,1$) - (static_cast<short int>(div1.quot) * b1$funcstart_719,1$)) <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (47,35): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= b1$funcstart_719,1$.
+C:\Escher\Customers\prang\prang.c (47,35): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: b1$funcstart_719,1$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (47,38): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (static_cast<short int>(div1.quot) * b1$funcstart_719,1$).
+C:\Escher\Customers\prang\prang.c (47,38): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (static_cast<short int>(div1.quot) * b1$funcstart_719,1$) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (47,40): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= div1.quot.
+C:\Escher\Customers\prang\prang.c (47,40): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: div1.quot <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (47,40): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= static_cast<short int>(div1.quot).
+C:\Escher\Customers\prang\prang.c (47,40): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: static_cast<short int>(div1.quot) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (48,10): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= r2$719,1;729,8$.
+C:\Escher\Customers\prang\prang.c (48,10): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: r2$719,1;729,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (48,13): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (static_cast<short int>(div2.rem) * r2$719,1;729,8$).
+C:\Escher\Customers\prang\prang.c (48,13): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (static_cast<short int>(div2.rem) * r2$719,1;729,8$) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (48,15): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: div2.rem <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (48,15): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= div2.rem.
+C:\Escher\Customers\prang\prang.c (48,15): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= static_cast<short int>(div2.rem).
+C:\Escher\Customers\prang\prang.c (48,15): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: static_cast<short int>(div2.rem) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (48,33): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: minof(short int) <= ((static_cast<short int>(div2.rem) * r2$719,1;729,8$) - (static_cast<short int>(div2.quot) * b2$719,1;729,8$)).
+C:\Escher\Customers\prang\prang.c (48,33): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: ((static_cast<short int>(div2.rem) * r2$719,1;729,8$) - (static_cast<short int>(div2.quot) * b2$719,1;729,8$)) <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (48,35): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= b2$719,1;729,8$.
+C:\Escher\Customers\prang\prang.c (48,35): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: b2$719,1;729,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (48,38): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (static_cast<short int>(div2.quot) * b2$719,1;729,8$).
+C:\Escher\Customers\prang\prang.c (48,38): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (static_cast<short int>(div2.quot) * b2$719,1;729,8$) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (48,40): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= div2.quot.
+C:\Escher\Customers\prang\prang.c (48,40): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: div2.quot <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (48,40): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= static_cast<short int>(div2.quot).
+C:\Escher\Customers\prang\prang.c (48,40): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: static_cast<short int>(div2.quot) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (49,10): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= r3$719,1;730,8$.
+C:\Escher\Customers\prang\prang.c (49,10): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: r3$719,1;730,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (49,13): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (static_cast<short int>(div3.rem) * r3$719,1;730,8$).
+C:\Escher\Customers\prang\prang.c (49,13): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (static_cast<short int>(div3.rem) * r3$719,1;730,8$) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (49,15): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: div3.rem <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (49,15): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= div3.rem.
+C:\Escher\Customers\prang\prang.c (49,15): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= static_cast<short int>(div3.rem).
+C:\Escher\Customers\prang\prang.c (49,15): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: static_cast<short int>(div3.rem) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (49,33): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: minof(short int) <= ((static_cast<short int>(div3.rem) * r3$719,1;730,8$) - (static_cast<short int>(div3.quot) * b3$719,1;730,8$)).
+C:\Escher\Customers\prang\prang.c (49,33): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: ((static_cast<short int>(div3.rem) * r3$719,1;730,8$) - (static_cast<short int>(div3.quot) * b3$719,1;730,8$)) <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (49,35): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= b3$719,1;730,8$.
+C:\Escher\Customers\prang\prang.c (49,35): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: b3$719,1;730,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (49,38): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (static_cast<short int>(div3.quot) * b3$719,1;730,8$).
+C:\Escher\Customers\prang\prang.c (49,38): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (static_cast<short int>(div3.quot) * b3$719,1;730,8$) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (49,40): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: minof(short int) <= div3.quot.
+C:\Escher\Customers\prang\prang.c (49,40): Information! Confirmed: Type constraint satisfied in explicit conversion from 'int' to 'short int', proved: div3.quot <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (49,40): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= static_cast<short int>(div3.quot).
+C:\Escher\Customers\prang\prang.c (49,40): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: static_cast<short int>(div3.quot) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (51,5): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= p1$719,1;731,8$.
+C:\Escher\Customers\prang\prang.c (51,5): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: p1$719,1;731,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (51,8): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: minof(short int) <= ((M1$719,1;731,8$ * static_cast<int>(static_cast<integer>(p1$719,1;731,8$ < (int)0))) + p1$719,1;731,8$).
+C:\Escher\Customers\prang\prang.c (51,8): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: ((M1$719,1;731,8$ * static_cast<int>(static_cast<integer>(p1$719,1;731,8$ < (int)0))) + p1$719,1;731,8$) <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (51,11): Information! Confirmed: Type constraint satisfied in explicit conversion from 'integer' to 'int', proved: minof(int) <= static_cast<integer>(p1$719,1;731,8$ < (int)0).
+C:\Escher\Customers\prang\prang.c (51,11): Information! Confirmed: Type constraint satisfied in explicit conversion from 'integer' to 'int', proved: static_cast<integer>(p1$719,1;731,8$ < (int)0) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (51,17): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= p1$719,1;731,8$.
+C:\Escher\Customers\prang\prang.c (51,17): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: p1$719,1;731,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (51,25): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (M1$719,1;731,8$ * static_cast<int>(static_cast<integer>(p1$719,1;731,8$ < (int)0))).
+C:\Escher\Customers\prang\prang.c (51,25): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (M1$719,1;731,8$ * static_cast<int>(static_cast<integer>(p1$719,1;731,8$ < (int)0))) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (51,27): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: M1$719,1;731,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (51,27): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= M1$719,1;731,8$.
+C:\Escher\Customers\prang\prang.c (52,5): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= p2$719,1;733,8$.
+C:\Escher\Customers\prang\prang.c (52,5): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: p2$719,1;733,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (52,8): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: minof(short int) <= ((M2$719,1;733,8$ * static_cast<int>(static_cast<integer>(p2$719,1;733,8$ < (int)0))) + p2$719,1;733,8$).
+C:\Escher\Customers\prang\prang.c (52,8): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: ((M2$719,1;733,8$ * static_cast<int>(static_cast<integer>(p2$719,1;733,8$ < (int)0))) + p2$719,1;733,8$) <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (52,11): Information! Confirmed: Type constraint satisfied in explicit conversion from 'integer' to 'int', proved: minof(int) <= static_cast<integer>(p2$719,1;733,8$ < (int)0).
+C:\Escher\Customers\prang\prang.c (52,11): Information! Confirmed: Type constraint satisfied in explicit conversion from 'integer' to 'int', proved: static_cast<integer>(p2$719,1;733,8$ < (int)0) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (52,17): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= p2$719,1;733,8$.
+C:\Escher\Customers\prang\prang.c (52,17): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: p2$719,1;733,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (52,25): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (M2$719,1;733,8$ * static_cast<int>(static_cast<integer>(p2$719,1;733,8$ < (int)0))).
+C:\Escher\Customers\prang\prang.c (52,25): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (M2$719,1;733,8$ * static_cast<int>(static_cast<integer>(p2$719,1;733,8$ < (int)0))) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (52,27): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: M2$719,1;733,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (52,27): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= M2$719,1;733,8$.
+C:\Escher\Customers\prang\prang.c (53,5): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= p3$719,1;734,8$.
+C:\Escher\Customers\prang\prang.c (53,5): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: p3$719,1;734,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (53,8): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: minof(short int) <= ((M3$719,1;734,8$ * static_cast<int>(static_cast<integer>(p3$719,1;734,8$ < (int)0))) + p3$719,1;734,8$).
+C:\Escher\Customers\prang\prang.c (53,8): Information! Confirmed: Type constraint satisfied in implicit conversion from 'int' to 'short int', proved: ((M3$719,1;734,8$ * static_cast<int>(static_cast<integer>(p3$719,1;734,8$ < (int)0))) + p3$719,1;734,8$) <= maxof(short int).
+C:\Escher\Customers\prang\prang.c (53,11): Information! Confirmed: Type constraint satisfied in explicit conversion from 'integer' to 'int', proved: minof(int) <= static_cast<integer>(p3$719,1;734,8$ < (int)0).
+C:\Escher\Customers\prang\prang.c (53,11): Information! Confirmed: Type constraint satisfied in explicit conversion from 'integer' to 'int', proved: static_cast<integer>(p3$719,1;734,8$ < (int)0) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (53,17): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: minof(int) <= p3$719,1;734,8$.
+C:\Escher\Customers\prang\prang.c (53,17): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int' to 'int', proved: p3$719,1;734,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (53,25): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: minof(int) <= (M3$719,1;734,8$ * static_cast<int>(static_cast<integer>(p3$719,1;734,8$ < (int)0))).
+C:\Escher\Customers\prang\prang.c (53,25): Information! Confirmed: Arithmetic result of operator '*' is within limit of type 'int', proved: (M3$719,1;734,8$ * static_cast<int>(static_cast<integer>(p3$719,1;734,8$ < (int)0))) <= maxof(int).
+C:\Escher\Customers\prang\prang.c (53,27): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: M3$719,1;734,8$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (53,27): Information! Confirmed: Type constraint satisfied in implicit conversion from 'short int const' to 'int', proved: minof(int) <= M3$719,1;734,8$.
+C:\Escher\Customers\prang\prang.c (61,34): Information! Confirmed: Precondition of 'operator /' satisfied (defined at built in declaration), proved: !(0.0 == static_cast<double>(static_cast<real>(M1$funcend_719,1$))).
+C:\Escher\Customers\prang\prang.c (62,34): Information! Confirmed: Precondition of 'operator /' satisfied (defined at built in declaration), proved: !(0.0 == static_cast<double>(static_cast<real>(M2$funcend_719,1$))).
+C:\Escher\Customers\prang\prang.c (63,34): Information! Confirmed: Precondition of 'operator /' satisfied (defined at built in declaration), proved: !(0.0 == static_cast<double>(static_cast<real>(M3$funcend_719,1$))).
+C:\Escher\Customers\prang\prang.c (84,5): Information! Confirmed: Loop initialisation establishes end condition or a valid variant (defined at C:\Escher\Customers\prang\prang.c (86,20)), proved: 0 <= (limit - count).
+C:\Escher\Customers\prang\prang.c (87,5): Information! Confirmed: Loop body establishes end condition or preserves validity of variant (defined at C:\Escher\Customers\prang\prang.c (86,20)), proved: 0 <= (limit - count$loopend$).
+C:\Escher\Customers\prang\prang.c (87,5): Information! Confirmed: Loop body establishes end condition or decreases variant (defined at C:\Escher\Customers\prang\prang.c (86,5)), proved: (limit - count$loopend$) < (limit - count$loopstart_763,5$).
+C:\Escher\Customers\prang\prang.c (89,9): Information! Confirmed: Arithmetic result of operator '++' is within limit of type 'int', proved: ++count$loopstart_763,5$ <= maxof(int).
+C:\Escher\Customers\prang\prang.c (89,9): Information! Confirmed: Arithmetic result of operator '++' is within limit of type 'int', proved: minof(int) <= ++count$loopstart_763,5$.
+Generating verification output files ... 0 seconds
+0 errors, 3 warnings found.
+Verification Studio: Job completed but warnings were detected!
+
