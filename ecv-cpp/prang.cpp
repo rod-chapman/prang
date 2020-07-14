@@ -18,16 +18,11 @@ static const int LIMIT = 80;
 class WHPrang
 {
 public:
-	WHPrang() post(invariant1());
+	WHPrang();
 
 	double GetRandom()
 		writes(p1; p2; p3)
-		pre(invariant1())
-		post(_ecv_result > 0.0; _ecv_result < 1.0; invariant1());
-
-	ghost(
-		bool invariant1() const returns(p1 > 0 && p1 < M1 && p2 > 0 && p2 < M2 && p3 > 0 && p3 < M3);
-	)
+		post(_ecv_result > 0.0; _ecv_result < 1.0);
 
 private:
 	static const int16_t M1	=	30269;	/* 1st 16-bit prime modulus					*/
@@ -45,7 +40,13 @@ private:
 	static const int16_t a3	=	178;	/* 1st auxiliary value used in calculation	*/
 	static const int16_t b3	=	63;		/* 2nd auxiliary value used in calculation	*/
 
-	int16_t p1, p2, p3;
+	typedef int16_t invariant(value > 0 && value < WHPrang::M1) P1Type;
+	typedef int16_t invariant(value > 0 && value < WHPrang::M2) P2Type;
+	typedef int16_t invariant(value > 0 && value < WHPrang::M3) P3Type;
+	
+	P1Type p1;
+	P2Type p2;
+	P3Type p3;
 };
 
 WHPrang::WHPrang() : p1(1), p2(2), p3(3)
@@ -70,38 +71,31 @@ double WHPrang::GetRandom()
 
 	/* now calculate next values for p1, p2, p3 using the auxiliary value method to avoid 16-bit overflow */
 
-	p1 = r1 * (int16_t)(div1.rem) - b1 * (int16_t)(div1.quot);
-	assert(p1 > -M1; p1 != 0; p1 < M1);
-	p2 = r2 * (int16_t)(div2.rem) - b2 * (int16_t)(div2.quot);
-	assert(p2 > -M2; p2 != 0; p2 < M2);
-	p3 = r3 * (int16_t)(div3.rem) - b3 * (int16_t)(div3.quot);
-	assert(p3 > -M3; p3 != 0; p3 < M3);
+	const int16_t temp1 = r1 * (int16_t)(div1.rem) - b1 * (int16_t)(div1.quot);
+	p1 = temp1 + (int)(p1 < 0) * M1;
 
-	p1 += (int)(p1 < 0) * M1;												/*### POSTCOND: (p1 > 0) and (p1 < m1)    :###*/
-	p2 += (int)(p2 < 0) * M2;												/*### POSTCOND: (p2 > 0) and (p2 < M2)    :###*/
-	p3 += (int)(p3 < 0) * M3;												/*### POSTCOND: (p3 > 0) and (p3 < M3)    :###*/
+	const int16_t temp2 = r2 * (int16_t)(div2.rem) - b2 * (int16_t)(div2.quot);
+	p2 = temp2 + (int)(p2 < 0) * M2;
+	
+	const int16_t temp3 = r3 * (int16_t)(div3.rem) - b3 * (int16_t)(div3.quot);
+	p3 = temp3 + (int)(p3 < 0) * M3;
 
 	/* note: the above 3 lines conditionally increment the values without
 	 * branching; there is *exactly one simple path* through the function
 	 */
+	/* now calculate and return the fractional part of the sum of p1, p2, and p3	*/
 
-	assert(invariant1());		// only here in case this helps the proofs for the remainder of the function
+	double raux1 = (double)p1/(double)M1;	/* compute intermediate term in p1	*/
+	double raux2 = (double)p2/(double)M2;	/* compute intermediate term in p2	*/
+	double raux3 = (double)p3/(double)M3;	/* compute intermediate term in p3	*/
 
-	{	/* now calculate and return the fractional part of the sum of p1, p2, and p3	*/
+	assert(raux1 > 0.0; raux2 > 0.0; raux3 > 0.0);
 
-		double raux1 = (double)p1/(double)M1;	/* compute intermediate term in p1	*/
-		double raux2 = (double)p2/(double)M2;	/* compute intermediate term in p2	*/
-		double raux3 = (double)p3/(double)M3;	/* compute intermediate term in p3	*/
+	assert(raux1 + raux2 + raux3 > 0.0);
+	double result = fmod( raux1 + raux2 + raux3, 1.0);		/*### POSTCOND: (result > 0) and (result < 1.0)	  :###*/
 
-		assert(raux1 > 0.0; raux2 > 0.0; raux3 > 0.0);
-
-		assert(raux1 + raux2 + raux3 > 0.0);
-		double result = fmod( raux1 + raux2 + raux3, 1.0);		/*### POSTCOND: (result > 0) and (result < 1.0)	  :###*/
-
-		return result;	/* return final pseudorandom value	*/
-	}
+	return result;	/* return final pseudorandom value	*/
 }
-
 
 /* End of class WHprang
  * -------------------------------------------------------------------------------------------------------------------*/
@@ -120,7 +114,6 @@ int main(void) writes(_ecv_files)
 
 	while (count < limit)
 	writes(prang; _ecv_files; count)		// this clause is optional, eCv will infer it anyway
-	keep(prang.invariant1())
 	decrease(limit - count)
 	{
 		printf("%lf\n", prang.GetRandom());
