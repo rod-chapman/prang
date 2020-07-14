@@ -12,7 +12,9 @@ project Main is
       for Proof_Switches ("Ada") use ("--report=statistics",
                                       "--level=3",
                                       "--proof=per_path",
-                                      "--steps=10000",
+                                      "--no-global-generation",
+                                      "--no-inlining",
+                                      "--steps=20000",
                                       "-j8");
    end Prove;
 

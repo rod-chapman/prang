@@ -1,0 +1,28 @@
+Summary of SPARK analysis
+=========================
+
+--------------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow   CodePeer                       Provers   Justified   Unproved
+--------------------------------------------------------------------------------------------------------------
+Data Dependencies                 1          1          .                             .           .          .
+Flow Dependencies                 1          1          .                             .           .          .
+Initialization                    6          6          .                             .           .          .
+Non-Aliasing                      .          .          .                             .           .          .
+Run-time Checks                  43          .          .    42 (CVC4 89%, Trivial 11%)           .          1
+Assertions                        .          .          .                             .           .          .
+Functional Contracts              .          .          .                             .           .          .
+LSP Verification                  .          .          .                             .           .          .
+Termination                       .          .          .                             .           .          .
+Concurrency                       .          .          .                             .           .          .
+--------------------------------------------------------------------------------------------------------------
+Total                            51    8 (16%)          .                      42 (82%)           .     1 (2%)
+
+
+max steps used for successful proof: 601
+
+Analyzed 1 unit
+in unit p, 4 subprograms and packages out of 4 analyzed
+  P at p.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  P.Prang at p.ads:10 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (41 checks)
+  P.Prang.Remainder_1 at p.adb:59 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 1 checks out of 2 proved
+  P.Prang.Temp_TPredicate at p.adb:52 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
