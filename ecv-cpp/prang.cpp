@@ -8,6 +8,7 @@
 #include <climits>
 #include <cmath>
 #include <cstdlib>
+#include <cstdint>
 
 static const int LIMIT = 80;
 
@@ -29,22 +30,22 @@ public:
 	)
 
 private:
-	static const short M1	=	30269;	/* 1st 16-bit prime modulus					*/
-	static const short r1	=	171;	/* a primitive root mod M1					*/
-	static const short a1	=	177;	/* 1st auxiliary value used in calculation	*/
-	static const short b1	=	2;		/* 2nd auxiliary value used in calculation	*/
+	static const int16_t M1	=	30269;	/* 1st 16-bit prime modulus					*/
+	static const int16_t r1	=	171;	/* a primitive root mod M1					*/
+	static const int16_t a1	=	177;	/* 1st auxiliary value used in calculation	*/
+	static const int16_t b1	=	2;		/* 2nd auxiliary value used in calculation	*/
 
-	static const short M2	=	30307;	/* 2nd 16-bit prime modulus					*/
-	static const short r2	=	172;	/* a primitive root mod M2					*/
-	static const short a2	=	176;	/* 1st auxiliary value used in calculation	*/
-	static const short b2	=	35;	/* 2nd auxiliary value used in calculation	*/
+	static const int16_t M2	=	30307;	/* 2nd 16-bit prime modulus					*/
+	static const int16_t r2	=	172;	/* a primitive root mod M2					*/
+	static const int16_t a2	=	176;	/* 1st auxiliary value used in calculation	*/
+	static const int16_t b2	=	35;		/* 2nd auxiliary value used in calculation	*/
 
-	static const short M3	=	30323;	/* 3rd 16-bit prime modulus					*/
-	static const short r3	=	170;	/* a primitive root mod M3					*/
-	static const short a3	=	178;	/* 1st auxiliary value used in calculation	*/
-	static const short b3	=	63;		/* 2nd auxiliary value used in calculation	*/
+	static const int16_t M3	=	30323;	/* 3rd 16-bit prime modulus					*/
+	static const int16_t r3	=	170;	/* a primitive root mod M3					*/
+	static const int16_t a3	=	178;	/* 1st auxiliary value used in calculation	*/
+	static const int16_t b3	=	63;		/* 2nd auxiliary value used in calculation	*/
 
-	short p1, p2, p3;
+	int16_t p1, p2, p3;
 };
 
 WHPrang::WHPrang() : p1(1), p2(2), p3(3)
@@ -69,11 +70,11 @@ double WHPrang::GetRandom()
 
 	/* now calculate next values for p1, p2, p3 using the auxiliary value method to avoid 16-bit overflow */
 
-	p1 = r1 * (short)(div1.rem) - b1 * (short)(div1.quot);
+	p1 = r1 * (int16_t)(div1.rem) - b1 * (int16_t)(div1.quot);
 	assert(p1 > -M1; p1 != 0; p1 < M1);
-	p2 = r2 * (short)(div2.rem) - b2 * (short)(div2.quot);
+	p2 = r2 * (int16_t)(div2.rem) - b2 * (int16_t)(div2.quot);
 	assert(p2 > -M2; p2 != 0; p2 < M2);
-	p3 = r3 * (short)(div3.rem) - b3 * (short)(div3.quot);
+	p3 = r3 * (int16_t)(div3.rem) - b3 * (int16_t)(div3.quot);
 	assert(p3 > -M3; p3 != 0; p3 < M3);
 
 	p1 += (int)(p1 < 0) * M1;												/*### POSTCOND: (p1 > 0) and (p1 < m1)    :###*/
