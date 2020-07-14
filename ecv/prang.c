@@ -40,15 +40,20 @@ bool invariant1() returns(p1 > 0 && p1 < M1 && p2 > 0 && p2 < M2 && p3 > 0 && p3
 double WHprang (void)
 writes(p1; p2; p3)
 pre(invariant1())
-post(_ecv_result > 0.0; _ecv_result < 1.0)
+post(_ecv_result > 0.0; _ecv_result < 1.0; invariant1())
 {
 	/* first, get required quotients and remainders	*/
 
 	div_t div1 = div((int)p1, (int)a1);									/*### PRECOND: (p1 > 0) and (p1 < M1)     :###*/
+	assert(p1 < a1 => div1.rem == p1; p1 >= a1 => div1.quot != 0);		// help the prover to case-split
 	assert(div1.rem != 0 || div1.quot != 0);
+
 	div_t div2 = div((int)p2, (int)a2);									/*### PRECOND: (p2 > 0) and (p2 < M2)     :###*/
+	assert(p2 < a2 => div2.rem == p2; p2 >= a2 => div2.quot != 0);		// help the prover to case-split
 	assert(div2.rem != 0 || div2.quot != 0);
+
 	div_t div3 = div((int)p3, (int)a3);									/*### PRECOND: (p3 > 0) and (p3 < M3)     :###*/
+	assert(p3 < a3 => div3.rem == p3; p3 >= a3 => div3.quot != 0);		// help the prover to case-split
 	assert(div3.rem != 0 || div3.quot != 0);
 
 	/* now calculate next values for p1, p2, p3 using the auxiliary value method to avoid 16-bit overflow */
@@ -93,6 +98,11 @@ post(_ecv_result > 0.0; _ecv_result < 1.0)
 
 int main(void) writes(p1; p2; p3; _ecv_files)
 {
+	// Initialise p1, p2, p3 explicitly because eCv doesn't treat 'main' specially
+	p1 = 1;
+	p2 = 2;
+	p3 = 3;
+
 	const int limit = LIMIT;
 	int       count = 0;
 
@@ -100,6 +110,7 @@ int main(void) writes(p1; p2; p3; _ecv_files)
 
 	while (count < limit)
 	writes(p1; p2; p3; _ecv_files; count)		// this clause is optional, eCv will infer it anyway
+	keep(invariant1())
 	decrease(limit - count)
 	{
 		printf("%lf\n", WHprang());
